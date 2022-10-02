@@ -12,7 +12,7 @@ app.use(express.static("static"));
 app.get("/", (req, res) => {
   const config = {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
   };
 
