@@ -1,8 +1,11 @@
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 const axios = require("axios").default;
 
 const app = express();
+let auth = process.env.AUTH;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
@@ -12,7 +15,7 @@ app.use(express.static("static"));
 app.get("/", (req, res) => {
   const config = {
     headers: {
-      Authorization: "Bearer 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",
+      Authorization: auth,
     },
   };
 
